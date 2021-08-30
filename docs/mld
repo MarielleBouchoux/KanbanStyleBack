@@ -1,0 +1,4 @@
+List (Name)
+Card (Title, position, color, #listId)
+possess (#tag_id, #card_id)
+Tag (Name)

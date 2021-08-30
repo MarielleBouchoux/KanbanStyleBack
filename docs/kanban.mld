@@ -1,0 +1,4 @@
+LISTE (nom, position)
+CARTE (titre, position, couleur, #liste(id))
+LABEL (nom, couleur)
+CARTE_LABEL (#carte(id), #label(id))

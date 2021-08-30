@@ -1,0 +1,70 @@
+### récupération de toutes les listes
+GET http://localhost:3000/lists/
+
+### récupération d'une liste
+GET http://localhost:3000/lists/1
+
+### création d'une liste
+POST http://localhost:3000/lists
+Content-Type: application/x-www-form-urlencoded
+
+name=liste test post
+&position=1
+
+
+### modification d'une liste
+PATCH http://localhost:3000/lists/1
+Content-Type: application/x-www-form-urlencoded
+
+position=2
+
+### suppression d'une liste
+DELETE http://localhost:3000/lists/3
+
+### récupération des cartes d'une liste
+GET http://localhost:3000/lists/1/cards
+
+### création d'une carte
+POST http://localhost:3000/cards
+Content-Type: application/x-www-form-urlencoded
+
+content=Carte de test
+&position=2
+&list_id=5
+
+### modification d'une carte
+PATCH http://localhost:3000/cards/4
+Content-Type: application/x-www-form-urlencoded
+
+position=1
+
+### suppression d'une carte
+DELETE http://localhost:3000/cards/4
+
+
+
+
+### récupération de tous les tags
+GET http://localhost:3000/tags/
+
+### création d'un tag
+POST http://localhost:3000/tags
+Content-Type: application/x-www-form-urlencoded
+
+name=super dry
+&color=#234567
+
+### modification d'un tag
+PATCH http://localhost:3000/tags/3
+Content-Type: application/x-www-form-urlencoded
+
+color=#123456
+
+### suppression d'un tag
+DELETE http://localhost:3000/tags/3
+
+### association de tag a une carte
+POST http://localhost:3000/cards/3/tags
+Content-Type: application/x-www-form-urlencoded
+
+tag_id=2
